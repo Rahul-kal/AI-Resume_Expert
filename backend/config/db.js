@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
 
 export const connectDB = async () => {
-    await mongoose.connect('')
-        .then(() => console.log("DB CONNECTED"));
-}
+  await mongoose
+    .connect('mongodb+srv://rahulkaliraman721:resume123@cluster0.qvm3ly0.mongodb.net/resumeXpertDB') // ← replace 'resumeXpertDB' with your actual DB name if different
+    .then(() => console.log("DB CONNECTED"))
+    .catch((err) => console.error("DB CONNECTION FAILED:", err));
+};
 
 // STEPS TO GET YOUR MONGODB ATLAS USERNAME & PASSWORD:
 //
